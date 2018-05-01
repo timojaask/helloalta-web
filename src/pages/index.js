@@ -8,7 +8,7 @@ export default () =>
       <OutboundLink href="mailto:contact@helloalta.com"><h1>helloalta</h1></OutboundLink>
     </div>
     <div className={styles.middle}>
-      <p>We are a tech and design duo creating mobile and web apps that people love to use. Makers of <OutboundLink href="https://itunes.apple.com/us/app/billy-currency-converter/id1311724635" target="_blank">Billy Currency Converter</OutboundLink> and <OutboundLink href="https://itunes.apple.com/us/app/movemeapp/id1108469133" target="_blank">Move Me App</OutboundLink>.</p>
+      <p>We are a tech and design duo creating mobile and web apps that people love to use. Makers of <OutboundLink href="https://www.billyconverter.com" target="_blank">Billy Currency Converter</OutboundLink> and <OutboundLink href="https://itunes.apple.com/us/app/movemeapp/id1108469133" target="_blank">Move Me App</OutboundLink>.</p>
     </div>
     <div className={styles.bottom}>
       <OutboundLink href="mailto:contact@helloalta.com">contact@helloalta.com</OutboundLink>
