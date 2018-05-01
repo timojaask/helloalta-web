@@ -25,11 +25,15 @@ a:hover {
 
 :root {
   --top-bottom-margin: 80px;
-  --top-initial-state: translateY(calc(50vh - var(--top-bottom-margin)));
+  --top-initial-state: translateY(
+    calc(50vh - var(--top-bottom-margin))
+  );
   --top-anim-delay: 1s;
   --top-anim-duration: 0.75s;
   --rest-anim-delay: calc(
-    var(--top-anim-delay) + var(--top-anim-duration) - 0.25s
+    var(--top-anim-delay) +
+    var(--top-anim-duration) -
+    0.25s
   );
   --rest-anim-duration: 1s;
 }
