@@ -23,15 +23,38 @@ a:hover {
   min-height: 500px;
 }
 
+:root {
+  --top-bottom-margin: 80px;
+  --top-initial-state: translateY(calc(50vh - var(--top-bottom-margin)));
+  --top-anim-delay: 1s;
+  --top-anim-duration: 0.75s;
+  --rest-anim-delay: calc(
+    var(--top-anim-delay) + var(--top-anim-duration) - 0.25s
+  );
+  --rest-anim-duration: 1s;
+}
+
 .top {
   display: flex;
   align-items: center;
-  margin-top: 70px;
+  margin-top: var(--top-bottom-margin);
+  animation-duration: var(--top-anim-duration);
+  animation-delay: var(--top-anim-delay);
+  animation-fill-mode: forwards;
+  animation-name: topSlideUp;
+  transform: var(--top-initial-state);
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes topSlideUp {
+  from { transform: var(--top-initial-state); }
+  to { transform: translateY(0); }
 }
 
 .top h1 {
   font-size: 30px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .middle {
@@ -42,6 +65,16 @@ a:hover {
   text-align: center;
   font-family: 'Lato';
   font-weight: lighter;
+  opacity: 0;
+  animation-duration: var(--rest-anim-duration);
+  animation-delay: var(--rest-anim-delay);
+  animation-fill-mode: forwards;
+  animation-name: fadein;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .middle p {
@@ -57,7 +90,12 @@ a:hover {
 
 .bottom {
   display: flex;
-  margin-bottom: 70px;
+  margin-bottom: var(--top-bottom-margin);
   font-family: 'Lato';
   font-weight: lighter;
+  opacity: 0;
+  animation-duration: var(--rest-anim-duration);
+  animation-delay: var(--rest-anim-delay);
+  animation-fill-mode: forwards;
+  animation-name: fadein;
 }
