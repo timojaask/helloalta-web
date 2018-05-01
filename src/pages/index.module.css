@@ -40,6 +40,7 @@ a:hover {
   justify-content: center;
   flex-grow: 1;
   text-align: center;
+  font-family: 'Lato';
 }
 
 .middle p {
@@ -56,4 +57,5 @@ a:hover {
 .bottom {
   display: flex;
   margin-bottom: 50px;
+  font-family: 'Lato';
 }
