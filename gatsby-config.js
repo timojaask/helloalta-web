@@ -1,3 +1,12 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+  console.log('Requested .env file')
+}
+
+console.log(JSON.stringify(process.env))
+
+console.log('TRACKING ID: ' + process.env.GA_TRACKING_ID)
+
 module.exports = {
   siteMetadata: {
     title: `helloalta`
@@ -6,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-118464744-1",
+        trackingId: process.env.GA_TRACKING_ID,
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
