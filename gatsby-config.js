@@ -1,12 +1,3 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-  console.log('Requested .env file')
-}
-
-console.log(JSON.stringify(process.env))
-
-console.log('TRACKING ID: ' + process.env.GA_TRACKING_ID)
-
 module.exports = {
   siteMetadata: {
     title: `helloalta`
